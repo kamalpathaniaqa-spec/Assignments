@@ -2,11 +2,11 @@
 
 //Loan Eligibility check 
 function LoanEligibilityCheck(
-    customerName: string ,
-    creditScore: number ,
-    income: number ,
-    isEmployed: boolean ,
-    debtToIncomeRatio: number,
+    customerName: string,
+    creditScore: number,
+    income: number,
+    isEmployed: boolean,
+    debtToIncomeRatio: number
 ): void {
     let isLoanApproved: boolean = false;
     
@@ -40,4 +40,5 @@ function LoanEligibilityCheck(
         console.log(`${customerName} is Not eligible for the loan`);
     }
 }
+
 export {};
