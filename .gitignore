@@ -1,0 +1,9 @@
+node_modules/
+ts-node/
+
+git add javascript-training/Arithmetic-operator/
+git add package.json package-lock.json tsconfig.json
+
+
+
+

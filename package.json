@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "assignment2": "ts-node javascript-training/assignments/assignment2.ts",
+    "assignment3": "ts-node javascript-training/assignments/assignment3.ts",
+    "assignment4": "ts-node javascript-training/assignments/assignment4.ts"
+  }
+}
