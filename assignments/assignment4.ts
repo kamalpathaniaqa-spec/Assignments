@@ -33,13 +33,7 @@
           //final balance
               balance = totalCredited + totalDebited;
 
-
-            // 3. Calculate Total Balance
-            let totalBalance = 0;
-            for (const transaction of transactions) {
-              totalBalance += transaction;
-            }
-        
+    
      
                   console.log("Total credit transactions:", creditCount);
                    console.log("Total debit transactions:", debitCount);
@@ -47,7 +41,7 @@
                    console.log("Total Amount Credited:", totalCredited);
                     console.log("Total Amount Debited:", totalDebited);
 
-                    console.log("Total Amount Remaining in Bank Account:", totalBalance);   
+                    console.log("Total Amount Remaining in Bank Account:", balance);   
                     console.log("Suspicious Count:", suspiciousCount);
 
         
