@@ -8,6 +8,7 @@ baseSalary: number;
 experience: number;
 rating: number;
  }
+ 
  const employees = [{ name: "Alice Johnson", baseSalary: 75000.0, experience: 5.1, rating: 4.2 },
      { name: "Bob Smith", baseSalary: 68000.0, experience: 3.2, rating: 3.8 },
      { name: "Carol Davis", baseSalary: 82000.0, experience: 7.1, rating: 4.5 },
@@ -41,6 +42,7 @@ rating: number;
                    hikeMap.forEach((hikePercent, name) =>{
            
                   console.log(`${name} → ${hikePercent.toFixed(2)}%`);
+                  
                  });
             
         
