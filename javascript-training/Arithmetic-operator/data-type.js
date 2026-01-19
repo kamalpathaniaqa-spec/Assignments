@@ -106,7 +106,7 @@ console.log(currentDate.getSeconds()); //output: milliseconds
 console.log(currentDate.getMillieconds()); //output: milliseconds
 
 
-// 5. Map ==> Map represents a colection of key-value pairs where keys can be of any data type.
+// 5. Map ==> Map represents a colection of key-value pairs where keys can be of any data type.         
 
 let employeeMap = new Map();
 employeeMap.set("empID",101);

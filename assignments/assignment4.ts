@@ -1,4 +1,5 @@
- 
+
+// Assignment -4 (Conditional Statements & Loops)
 
  const transactions :number[]=[50000, -2000, 3000, -15000, -200, -300, 4000, -3000];
   
@@ -19,22 +20,20 @@
         }else{
             debitCount++;
             totalDebited += amount;  
-        }
-            
-
+            }
 
             // Suspicious transaction
-            if (amount > 10000 || amount < -10000) {
-               console.log("Suspicious " + amount + " Transaction: " + amount);
-                suspiciousCount++;
-            }
-            }
-     
-          //final balance
-              balance = totalCredited + totalDebited;
+              if (amount > 10000 || amount < -10000) {
+               //console.log("Suspicious " + amount + " Transaction: " + amount);
+                   console.log("Suspicious Transaction Amount:", amount);
 
-    
-     
+                suspiciousCount++;
+               }
+               }
+     
+                 //final balance
+                 balance  = totalCredited + totalDebited;
+               
                   console.log("Total credit transactions:", creditCount);
                    console.log("Total debit transactions:", debitCount);
 
@@ -46,4 +45,4 @@
 
         
 
-        export{};
+                  export{};
