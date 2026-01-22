@@ -16,7 +16,7 @@ for (let i: number = 0; i < prices.length - 1; i++) {
     for (let j: number = i + 1; j < prices.length; j++) {
 
         // Calculate the profit if we buy on day i and sell on day j
-        const profit: number = prices[j] - prices[i];
+        const profit: number = prices[j]! - prices[i]!;
 
         // If this profit is greater than the current maximum profit
         if (profit > maxProfit) {
