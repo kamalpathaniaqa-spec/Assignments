@@ -24,6 +24,7 @@ console.log("Original String: '" + str2 + "'");
 console.log("Reversed String: '" + str2.split('').reverse().join('') + "'");
 console.log("Is Palindrome: " + isPalindrome(str2));
 
+export {};  
 
 
 
@@ -31,23 +32,5 @@ console.log("Is Palindrome: " + isPalindrome(str2));
 
 
 
-    /* Initialize pointers
-    let left: number = 0;
-    let right: number = cleanedStr.length - 1;
     
-    // Check for palindrome
-    while (left < right) {
-        if (cleanedStr.charAt(left) !== cleanedStr.charAt(right)) {
-            return false;
-        }
-        left++;
-        right--;
-    }
-    return true;
-}
-
-// Test the function
-console.log(isPalindrome(str1));  // Output: true
-console.log(isPalindrome(str2));// Output: false8*/
-
      
