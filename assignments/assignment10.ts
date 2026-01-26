@@ -14,6 +14,7 @@ function isPalindrome(s: string): boolean {
     // compared both strings
     return cleaned === reversed;
 }
+
 console.log("Checking palindrome for string 1:");
 console.log("Original String: '" + str1 + "'");
 console.log("Reversed String: '" + str1.split('').reverse().join('') + "'");
@@ -23,6 +24,7 @@ console.log("\nChecking palindrome for string 2:");
 console.log("Original String: '" + str2 + "'");
 console.log("Reversed String: '" + str2.split('').reverse().join('') + "'");
 console.log("Is Palindrome: " + isPalindrome(str2));
+
 
 export {};  
 
