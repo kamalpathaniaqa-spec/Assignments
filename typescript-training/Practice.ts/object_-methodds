@@ -1,0 +1,24 @@
+//Object :- Represents a collection of key-value pairs, often used to group related data and functions.
+
+let detailsofPerson = {
+    name: "Kamal Pathania",
+    age: 30,
+    havingVisa: true,
+    addresses: [
+        {
+            street: "123 Main St",
+            city: "janakpuri",
+            state: "Delhi",
+            country: "India"
+        },
+        {
+            city: "Kangra",
+            state: "Himachal pradesh"
+        }
+    ]
+};
+// Accessing object properties
+console.log("Name:",detailsofPerson.name);
+console.log("Age:",detailsofPerson.age);
+console.log("Has Visa:",detailsofPerson.havingVisa);
+console.log("Addresses:",detailsofPerson.addresses);
