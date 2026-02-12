@@ -4,6 +4,9 @@ ts-node/
 git add javascript-training/Arithmetic-operator/
 git add package.json package-lock.json tsconfig.json
 
-
-
-
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

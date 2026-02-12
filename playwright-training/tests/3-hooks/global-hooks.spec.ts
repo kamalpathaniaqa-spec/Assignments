@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, chromium } from '@playwright/test';
 
-test.describe('Group 1 Tests', async () => {
+test.describe('Group 1 Tests',  () => {
     
     test('Group 1- Test 1', async ({ page }) => {
         console.log("Group 1 - Test 1: Executing");
@@ -17,7 +17,7 @@ test.describe('Group 1 Tests', async () => {
 });
 
 
-test.describe('Group 2 Tests', async () => {
+test.describe('Group 2 Tests', () => {
     
     test('Group 2- Test 1', async ({ page }) => {
         console.log("Group 2 - Test 1: Executing");
