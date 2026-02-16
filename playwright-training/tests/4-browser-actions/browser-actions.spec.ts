@@ -27,7 +27,7 @@
         await expect(page).toHaveTitle('Google');
 
         //Launch the new apllication  "https://www.amazon.com/" within the same.
-        await page.goto("https://www.playwright.dev/");
+        await page.goto("https://www.myluxurycart.com/");
 
          // go back to previous application.
          await page.goBack();

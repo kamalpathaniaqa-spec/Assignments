@@ -3,12 +3,67 @@
 
 //There are multiple locators available in Playwright to locate the elements. 
 
-//1.getByRole.:- faster then other locastors and more reliable. It is based on the accessibility tree of the page, which is a representation of the page's structure that is used by assistive technologies. It is recommended to use getByRole whenever possible, as it is more likely to be stable and less likely to break if the page structure changes.
-//2.getByLabel:- getByLabel is a locator method in Playwright that allows you to locate an element based on its associated label. This is particularly useful for form elements, such as input fields, where the label provides a clear and descriptive way to identify the element. When you use getByLabel, Playwright will search for an element that has a label with the specified text and return the associated form control. This can help improve the readability and maintainability of your tests, as it allows you to refer to elements in a more human-readable way.
-//3.getByText :- getByText is a locator method in Playwright that allows you to locate an element based on its visible text content. This can be useful for finding elements such as buttons, links, or any other element that contains text. When you use getByText, Playwright will search for an element that contains the specified text and return it. This can help improve the readability of your tests, as it allows you to refer to elements in a more human-readable way. However, it is important to note that getByText may not be the most reliable locator method, as it can be affected by changes in the page's content or structure. It is generally recommended to use more specific locator methods, such as getByRole or getByLabel, whenever possible.
-//4.getByPlaceholder :- getByPlaceholder is a locator method in Playwright that allows you to locate an input element based on its placeholder text. The placeholder text is the text that appears inside an input field when it is empty, providing a hint to the user about what kind of information should be entered. When you use getByPlaceholder, Playwright will search for an input element that has the specified placeholder text and return it. This can be useful for finding input fields in a more human-readable way, especially when the placeholder text is descriptive and unique. However, it is important to note that getByPlaceholder may not be the most reliable locator method, as it can be affected by changes in the page's content or structure. It is generally recommended to use more specific locator methods, such as getByRole or getByLabel, whenever possible.
-//5.getByAltText :- getByAltText is a locator method in Playwright that allows you to locate an element based on its alternative text (alt text). Alt text is a description of an image that is used for accessibility purposes, and it is typically displayed when the image cannot be loaded or when a user is using a screen reader. When you use getByAltText, Playwright will search for an element that has the specified alt text and return it. This can be useful for finding images in a more human-readable way, especially when the alt text is descriptive and unique. However, it is important to note that getByAltText may not be the most reliable locator method, as it can be affected by changes in the page's content or structure. It is generally recommended to use more specific locator methods, such as getByRole or getByLabel, whenever possible.
-//6.getByTitle :- getByTitle is a locator method in Playwright that allows you to locate an element based on its title attribute. The title attribute is an HTML attribute that provides additional information about an element, and it is typically displayed as a tooltip when the user hovers over the element. When you use getByTitle, Playwright will search for an element that has the specified title attribute and return it. This can be useful for finding elements in a more human-readable way, especially when the title attribute is descriptive and unique. However, it is important to note that getByTitle may not be the most reliable locator method, as it can be affected by changes in the page's content or structure. It is generally recommended to use more specific locator methods, such as getByRole or getByLabel, whenever possible.
-//7.getByTestId :- getByTestId is a locator method in Playwright that allows you to locate an element based on a custom data attribute called "data-testid". This attribute is often used in testing frameworks to provide a unique identifier for elements in the DOM, making it easier to locate them during testing. When you use getByTestId, Playwright will search for an element that has the specified "data-testid" attribute and return it. This can be useful for finding elements in a more human-readable way, especially when the "data-testid" attribute is descriptive and unique. However, it is important to note that getByTestId may not be the most reliable locator method, as it can be affected by changes in the page's content or structure. It is generally recommended to use more specific locator methods, such as getByRole or getByLabel, whenever possible.
-//8.locator (css) :- locator is a powerful and flexible method in Playwright that allows you to locate elements using CSS selectors. CSS selectors are a way to select elements in the DOM based on their attributes, classes, IDs, or other characteristics. When you use locator with a CSS selector, Playwright will search for elements that match the specified selector and return them. This can be useful for finding elements that do not have unique attributes or for selecting multiple elements at once. However, it is important to note that using complex CSS selectors can make your tests more brittle and less maintainable, as they may break if the page structure changes. It is generally recommended to use more specific locator methods, such as getByRole or getByLabel, whenever possible, and to use locator with CSS selectors as a last resort when other methods are not sufficient.
-//9.locator (xpath) :- locator is a powerful and flexible method in Playwright that allows you to locate elements using XPath expressions. XPath is a language for selecting nodes in an XML document, and it can be used to navigate through the structure of an HTML document as well. When you use locator with an XPath expression, Playwright will search for elements that match the specified expression and return them. This can be useful for finding elements that do not have unique attributes or for selecting multiple elements at once. However, it is important to note that using complex XPath expressions can make your tests more brittle and less maintainable, as they may break if the page structure changes. It is generally recommended to use more specific locator methods, such as getByRole or getByLabel, whenever possible, and to use locator with XPath expressions as a last resort when other methods are not sufficient.
+//1.getByRole
+//2.getByLabel
+//3.getByText
+//4.getByPlaceholder
+//5.getByAltText  (for images)
+//6.getByTitle
+//7.getByTestId
+//8.locator (css)
+//9.locator (xpath)
+
+//1.getByRole: this locator is going to help us to locate the element based on the role or nature of the element. 
+//syntax: page.getByRole('role', {name:'name of the element'})
+
+//if the element is a button, then the role will be 'button' and the name will be the text displayed on the button.
+//if the element is a text box, then the role will be 'textbox' and the name will be the label associated with the text box.
+/*
+* role = 'textbox' for input fields
+* role = 'link' for hyperlinks
+* role = 'button' for buttons
+* role = 'heading' for headings
+* role = 'checkbox' for checkboxes
+* role = 'radio' for radio buttons
+* role = 'combobox' for dropdowns
+* role = 'menuitem' for menu items
+* role = 'tab' for tabs
+* role = 'dialog' for dialog boxes
+* role = 'alert' for alert messages
+* role = 'table' for tables
+* role = 'list' for lists
+* role = 'listitem' for list items
+*/
+
+// Example: <h5>Student Registration Form</h5>  // this is a heading
+//let heading = page.getByRole('heading', {name:'Student Registration Form'});
+
+//2.getByLabel: this locator is going to help us to locate the element based on the label associated with the element.
+//syntax: page.getByLabel('label name')
+//Example: <label class="form-label" id="dateOfBirth-label">Date of Birth</label>
+//let dateOfBirth = page.getByLabel('Date of Birth');
+
+//3.getByText: this locator is going to help us to locate the element based on the text displayed on the element.
+//syntax: page.getByText('text displayed on the element')
+//Example: <h5>Student Registration Form</h5>
+//let heading = page.getByText('Student Registration Form');
+
+//4.getByPlaceholder: this locator is going to help us to locate the element based on the placeholder text displayed on the element.
+//syntax: page.getByPlaceholder('placeholder text')
+//Example: <input required="" autocomplete="off" placeholder="First Name" type="text" id="firstName" class=" mr-sm-2 form-control">
+//let firstName = page.getByPlaceholder('First Name');
+
+//5.getByAltText: this locator is going to help us to locate the element based on the alt text associated with the element. (for images)
+//syntax: page.getByAltText('alt text')
+//Example: <img src="images/logo.gif" alt="ParaBank" width="136" height="31" border="0" class="logo" title="ParaBank">
+//let image = page.getByAltText('ParaBank');
+
+//6.getByTitle: this locator is going to help us to locate the element based on the title associated with the element.
+//syntax: page.getByTitle('title')
+//Example: <img src="images/logo.gif" alt="ParaBank" width="136" height="31" border="0" class="logo" title="ParaBank">
+//let image = page.getByTitle('ParaBank');
+
+//7.getByTestId: this locator is going to help us to locate the element based on the test id associated with the element.
+// syntax: page.getByTestId('test id')
+//Example: <input type="text" id="firstName" class=" mr-sm-2 form-control" data-testid="firstName">
+//let firstName = page.getByTestId('firstName');
